@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <title>Dokumentasi Proyek</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">Memuat dokumen...</div>
   <script>
     window.$docsify = {
-      name: 'Dokumentasi Saya',
-      loadSidebar: true
+      name: 'My Project Docs',
+      repo: '',
+      loadSidebar: true,    // Mengaktifkan menu samping dari _sidebar.md
+      subMaxLevel: 3,       // Menampilkan sub-heading (###) di sidebar
+      auto2top: true,       // Scroll ke atas otomatis saat ganti halaman
+      search: {
+        placeholder: 'Cari dokumen...',
+        noData: 'Tidak ditemukan!',
+        depth: 6
+      }
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>
